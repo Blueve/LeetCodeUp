@@ -1,0 +1,13 @@
+{
+	"manifest_version" : 2,
+	"name" : "LeetCodeUp",
+	"version" : "0.0.3",
+	"background" : { "scripts" : ["background.js"] },
+	"permissions" : ["https://leetcode.com/problemset/"],
+	"description" : "Add extra feature for LeetCode.",
+	"content_scripts" : [
+	{
+		"matches" : ["https://leetcode.com/problemset/*"],
+		"js" : ["jquery-2.2.3.min.js", "plugin.js"]
+	}]
+}
