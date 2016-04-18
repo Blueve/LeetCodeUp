@@ -40,13 +40,9 @@ else {
 lockedProblemFilter();
 $("#b_showlocked").change(lockedProblemFilter)
 
-$("#b_pick").click(function() {
-    pickOne();
-})
 
-$("#b_repick").click(function () {
-    pickOne();
-})
+$("#b_pick").click(pickOne)
+$("#b_repick").click(pickOne)
 
 
 function pickOne() {
