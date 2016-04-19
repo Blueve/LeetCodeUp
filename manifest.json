@@ -9,6 +9,6 @@
 	{
 		"matches" : ["https://leetcode.com/problemset/*",
 		             "https://leetcode.com/tag/*"],
-		"js" : ["jquery-2.2.3.min.js", "plugin.js"]
+		"js" : ["jquery-2.2.3.min.js", "bootstrap.min.js","plugin.js"]
 	}]
 }
