@@ -1,14 +1,16 @@
 {
-	"manifest_version" : 2,
-	"name" : "LeetCodeUp",
-	"version" : "0.0.6",
-	"background" : { "scripts" : ["background.js"] },
-	"permissions" : ["tabs", "https://leetcode.com/"],
-	"description" : "Add extra feature for LeetCode.",
-	"content_scripts" : [
-	{
-		"matches" : ["https://leetcode.com/problemset/*",
-		             "https://leetcode.com/tag/*"],
-		"js" : ["jquery-2.2.3.min.js", "bootstrap.min.js","plugin.js"]
-	}]
+    "manifest_version" : 2,
+    "name" : "LeetCodeUp",
+    "version" : "0.0.7",
+    "background" : { "scripts" : ["background.js"] },
+    "permissions" : ["tabs", "https://leetcode.com/"],
+    "description" : "Add extra features for LeetCode.",
+    "content_scripts" : [
+    {
+        "matches" : ["https://leetcode.com/problemset/*",
+                     "https://leetcode.com/tag/*"],
+        "js" : ["jquery-2.2.3.min.js", 
+                "bootstrap.min.js",
+                "plugin.js"]
+    }]
 }
