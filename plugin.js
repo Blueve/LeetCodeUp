@@ -49,7 +49,7 @@ var tab_url = window.location.href;
 
 if(tab_url.indexOf("tag") == -1) {
     // Problemset page
-    $("#filterchosen").parent().after("<div class='row col-md-1'></div><div class='row col-md-4'><div class='checkbox'><label><input type='checkbox' id='b_showlocked' " + (show_locked ? "checked" : "") + "/>Show Locked Problems</label></div></div><div class='row col-md-1></div><div class='row col-md-1></div><div class='row col-md-1></div>")
+    $("#filterchosen").after("<div class='col-md-2 form-control-inline pull-left'><div class='checkbox'><label><input type='checkbox' id='b_showlocked' " + (show_locked ? "checked" : "") + "/>Show Locked Problems</label></div></div>")
     $("#searchResultRow").before("<div class='row col-md-6'><form class='form-inline'><div class='checkbox' style='width:24%'><label><input type='checkbox' id='b_pick_easy' checked />Easy</label></div><div class='checkbox' style='width:24%'><label><input type='checkbox' id='b_pick_medium' checked />Medium</label></div><div class='checkbox' style='width:24%'><label><input type='checkbox' id='b_pick_hard' checked />Hard</label></div><a class='btn btn-info btn-sm' id='b_pick' >Pick One</a></form></div><div class='row col-md-6'><label id='b_message'></lable></div>")
     $("#filterchosen").change(lockedProblemFilterAppend)
     $("footer").before("<div class='modal fade' id='pickOneModal'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h4 class='modal-title'>Pick this one?</h4></div><div class='modal-body'><p id='pickModalContent'></p></div><div class='modal-footer'><button type='button' class='btn btn-success' id='b_yes'>Yes</button><button type='button' class='btn btn-primary' id='b_repick'>Repick</button><button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button></div></div></div></div>")
@@ -63,5 +63,6 @@ if(tab_url.indexOf("tag") == -1) {
 
 lockedProblemFilter();
 $("#b_showlocked").change(lockedProblemFilter)
+$("#pickBtn").parent().remove()
 $("#b_pick").click(pickOne)
 $("#b_repick").click(pickOne)
